@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <title>Assigment sandeep soni</title>
+  <body>
+    <h3 style="text-align: center;">Print Student Data</h3>
+    <table cellpadding="2" class="table" cellspacing="2" border="0" bgcolor="#dfdfdf" width="40%" align="center">
+        <thead>
+            <tr>
+                <th style="text-align: left;" width="33%" >First Name</th>
+                <th style="text-align: left;" width="33%">Class Name</th>
+                <th style="text-align: left;" width="33%">Roll No</th>
+            </tr>
+        </thead>
+            <tbody id="dl-sandeep-data"></tbody>
+    </table>
+    <h3 style="text-align: center;">Delete Example</h3>
+    <table cellpadding="2" class="table" cellspacing="2" border="0" bgcolor="#dfdfdf" width="40%" align="center">
+        <thead>
+            <tr>
+                <th style="text-align: left;" width="33%" >First Name</th>
+                <th style="text-align: left;" width="33%">Class Name</th>
+                <th style="text-align: left;" width="33%">Roll No</th>
+            </tr>
+        </thead>
+            <tbody id="delete-sandeep-data"></tbody>
+    </table>
+    <h3 style="text-align: center;">Update Example</h3>
+    <table cellpadding="2" class="table" cellspacing="2" border="0" bgcolor="#dfdfdf" width="40%" align="center">
+        <thead>
+            <tr>
+                <th style="text-align: left;" width="33%" >First Name</th>
+                <th style="text-align: left;" width="33%">Class Name</th>
+                <th style="text-align: left;" width="33%">Roll No</th>
+            </tr>
+        </thead>
+            <tbody id="upate-sandeep-data"></tbody>
+    </table>
+<script type="text/javascript">
+    var sandeepinfo = [
+        {
+            name: "sandeep",
+            class: "B.tech",
+            rollno:  20
+        },
+        
+    ];
+ 
+
+    console.log(sandeepinfo);
+    var structure = '<tbody>'
+    for(i = 0;i < sandeepinfo.length; i++){
+        structure = structure + '<tr>'; 
+        structure = structure + '<td>' + sandeepinfo[i].name + '</td>'
+        structure = structure + '<td>' + sandeepinfo[i].class + '</td>'
+        structure = structure + '<td>' + sandeepinfo[i].rollno + '</td>'
+        structure = structure + '</tr>'; 
+    }
+    
+    structure = structure + '</tbody>';
+    document.getElementById('dl-sandeep-data').innerHTML = structure;
+    
+</script>
+
+<script type="text/javascript">
+    var sandeepinfo = [
+        {
+            name: "sandeep",
+            class: "B.tech",
+            rollno:  20
+        },
+        
+    ];
+   delete sandeepinfo[0].rollno;
+ 
+   console.log(sandeepinfo);
+    var structure = '<tbody>'
+    for(i = 0;i < sandeepinfo.length; i++){
+        structure = structure + '<tr>'; 
+        structure = structure + '<td>' + sandeepinfo[i].name + '</td>'
+        structure = structure + '<td>' + sandeepinfo[i].class + '</td>'
+        structure = structure + '<td>' + sandeepinfo[i].rollno + '</td>'
+        structure = structure + '</tr>'; 
+    }
+    
+    structure = structure + '</tbody>';
+    document.getElementById('delete-sandeep-data').innerHTML = structure;
+    
+</script>
+<script type="text/javascript">
+    var sandeepinfo = [
+        {
+            name: "sandeep",
+            class: "B.tech",
+            
+        },
+        
+    ];
+  
+    sandeepinfo[0].rollno=12;
+    console.log(sandeepinfo);
+    var structure = '<tbody>'
+    for(i = 0;i < sandeepinfo.length; i++){
+        structure = structure + '<tr>'; 
+        structure = structure + '<td>' + sandeepinfo[i].name + '</td>'
+        structure = structure + '<td>' + sandeepinfo[i].class + '</td>'
+        structure = structure + '<td>' + sandeepinfo[i].rollno + '</td>'
+        structure = structure + '</tr>'; 
+    }
+    
+    structure = structure + '</tbody>';
+    document.getElementById('upate-sandeep-data').innerHTML = structure;
+    
+</script>
+</body>
+</html>
